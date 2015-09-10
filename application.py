@@ -73,10 +73,10 @@ def store_in_dynamo(signup_data):
 
 
 def create_table():
-    signups = Table.create(application.config['STARTUP_SIGNUP_TABLE'], 
+    signups = Table.create(application.config['STARTUP_SIGNUP_TABLE'],
         schema=[
             HashKey('email') # defaults to STRING data_type
-        ], 
+        ],
         throughput={
             'read': 1,
             'write': 1,
